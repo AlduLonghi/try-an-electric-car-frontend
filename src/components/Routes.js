@@ -1,8 +1,7 @@
-import { Route, Switch } from 'react-router-dom';
+const Routes = () => (
+  <p>
+    hello
+  </p>
+);
 
-
-const Routes = () => {
-    return (  );
-}
- 
 export default Routes;
