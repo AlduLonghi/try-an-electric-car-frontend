@@ -13,7 +13,7 @@ const setUser = () => dispatch => {
         dispatch(loggedIn(true));
         dispatch({
           type: SET_USER,
-          artworks: res.data,
+          user: res.data,
         });
       }).catch(error => dispatch(loggedIn(false)));
 };
