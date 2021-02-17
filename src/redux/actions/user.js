@@ -1,20 +1,25 @@
 import axios from 'axios';
 import { LOGGED_IN, SET_USER } from './types';
 
-const loggedIn = logged => ({
+export const loggedIn = logged => ({
   type: LOGGED_IN,
   payload: logged,
 });
 
-const setUser = () => dispatch => {
-  axios.get('localhost:3000/', {})
+export const setUser = userData => ({
+  type: SET_USER,
+  user: userData,
+});
+
+export const fetchUser = () => dispatch => {
+  axios.get('http://localhost:3000/', {
+    headers: {
+      'Access-Control-Allow-Origin': 'http://localhost:3001',
+      'Access-Control-Allow-Credentials': true,
+    },
+  })
     .then(res => {
-      dispatch({
-        type: SET_USER,
-        user: res.data,
-      });
+      dispatch(setUser(res.data));
       dispatch(loggedIn(true));
     }).catch(() => dispatch(loggedIn(false)));
 };
-
-export default setUser;

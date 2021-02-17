@@ -1,0 +1,12 @@
+$yellow-color: #f9b401;
+
+.login-cont {
+  min-height: 100vh;
+  background-color: $yellow-color;
+  place-items: center;
+}
+
+.login-form {
+  width: 30%;
+  margin: auto;
+}

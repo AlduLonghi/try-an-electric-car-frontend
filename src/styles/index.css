@@ -2,9 +2,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: black;
 }
 
 #root {
-  width: 75%;
+  width: 80%;
   margin: auto;
 }

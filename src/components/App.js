@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import setUser from '../redux/actions/user';
+import { fetchUser } from '../redux/actions/user';
 import Routes from './Routes';
 
-const App = ({ setUser, loggedIn }) => {
+const App = ({ fetchUser, loggedIn }) => {
   useEffect(() => {
-    setUser();
+    fetchUser();
   }, []);
 
   return (
@@ -19,7 +19,7 @@ const App = ({ setUser, loggedIn }) => {
 
 App.propTypes = {
   loggedIn: PropTypes.bool.isRequired,
-  setUser: PropTypes.func.isRequired,
+  fetchUser: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -27,7 +27,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  setUser,
+  fetchUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
