@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { setUser, loggedIn } from '../redux/actions/user';
+import fetchConfig from '../helpers/fetch';
 
 const Login = ({ setUser, loggedIn }) => {
   const history = useHistory();
@@ -14,10 +15,8 @@ const Login = ({ setUser, loggedIn }) => {
 
   const handleOnClick = () => {
     fetch('http://localhost:3000/login', {
+      ...fetchConfig,
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
       body: JSON.stringify(loginInputs),
     })
       .then(res => {
