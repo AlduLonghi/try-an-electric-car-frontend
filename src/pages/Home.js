@@ -1,13 +1,7 @@
-import PropTypes from 'prop-types';
-
-const Home = ({ user }) => (
+const Home = () => (
   <div>
-    {user}
+    hello home
   </div>
 );
-
-Home.propTypes = {
-  user: PropTypes.instanceOf(Object).isRequired,
-};
 
 export default Home;

@@ -20,6 +20,6 @@ export const fetchUser = () => dispatch => {
   })
     .then(res => {
       dispatch(setUser(res.data));
-      dispatch(loggedIn(true));
-    }).catch(() => dispatch(loggedIn(false)));
+      dispatch(loggedIn('true'));
+    }).catch(() => dispatch(loggedIn('false')));
 };

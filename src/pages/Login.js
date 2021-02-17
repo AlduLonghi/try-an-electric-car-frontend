@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { setUser, loggedIn } from '../redux/actions/user';
 
 const Login = ({ setUser, loggedIn }) => {
+  const history = useHistory();
   const [loginInputs, setLoginInputs] = useState({ email: '', password: '' });
 
   const handleChange = e => {
@@ -12,13 +14,16 @@ const Login = ({ setUser, loggedIn }) => {
   };
 
   const handleOnClick = () => {
+    console.log(loginInputs);
     axios.post('http://localhost:3000/login', {
-      loginInputs,
+      email: loginInputs.email,
+      password: loginInputs.password,
     })
       .then(res => {
         setUser(res.data);
-        loggedIn(true);
-      }).catch(() => loggedIn(false));
+        loggedIn('true');
+        history.push('/home');
+      }).catch(() => loggedIn('false'));
   };
 
   return (
@@ -29,7 +34,7 @@ const Login = ({ setUser, loggedIn }) => {
           <small id="emailHelp" className="form-text text-muted">Well never share your email with anyone else.</small>
         </div>
         <div className="form-group">
-          <input type="password" className="form-control" name="password" placeholder="Password" />
+          <input type="password" className="form-control" name="password" placeholder="Password" onChange={handleChange} />
         </div>
         <button type="button" className="btn btn-primary" onClick={handleOnClick}>Login</button>
       </form>

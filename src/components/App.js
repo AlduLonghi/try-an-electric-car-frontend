@@ -18,7 +18,7 @@ const App = ({ fetchUser, loggedIn }) => {
 };
 
 App.propTypes = {
-  loggedIn: PropTypes.bool.isRequired,
+  loggedIn: PropTypes.string.isRequired,
   fetchUser: PropTypes.func.isRequired,
 };
 

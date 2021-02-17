@@ -10,17 +10,21 @@ const Routes = ({ loggedIn }) => (
     <Route
       exact
       path="/"
-      render={() => (
-        !loggedIn
-          ? (<Redirect to="/login" />)
-          : (<Redirect to="/home" />)
-      )}
+      render={() => {
+        let toRender;
+        if (loggedIn === 'false') {
+          toRender = (<Redirect to="/login" />);
+        } else if (loggedIn === true) {
+          toRender = (<Redirect to="/home" />);
+        }
+        return toRender;
+      }}
     />
   </Switch>
 );
 
 Routes.propTypes = {
-  loggedIn: PropTypes.bool.isRequired,
+  loggedIn: PropTypes.string.isRequired,
 };
 
 export default Routes;
