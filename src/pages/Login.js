@@ -16,7 +16,6 @@ const Login = ({ setUser, loggedIn }) => {
     console.log(loginInputs);
     fetch('http://localhost:3000/login', {
       method: 'POST',
-      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
       },

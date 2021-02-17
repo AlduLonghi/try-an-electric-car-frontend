@@ -1,4 +1,5 @@
 import { LOGGED_IN, SET_USER } from './types';
+import fetchConfig from '../../helpers/fetch';
 
 export const loggedIn = logged => ({
   type: LOGGED_IN,
@@ -11,9 +12,16 @@ export const setUser = userData => ({
 });
 
 export const fetchUser = () => dispatch => {
-  fetch('http://localhost:3000/')
+  fetch('http://localhost:3000/', fetchConfig)
     .then(res => {
-      dispatch(setUser(res.data));
-      dispatch(loggedIn('true'));
-    }).catch(() => dispatch(loggedIn('false')));
+      if (res.ok) {
+        res.json().then(jsonRes => {
+          console.log(jsonRes);
+          dispatch(setUser(jsonRes));
+        });
+        dispatch(loggedIn('true'));
+      } else {
+        dispatch(loggedIn('false'));
+      }
+    });
 };
