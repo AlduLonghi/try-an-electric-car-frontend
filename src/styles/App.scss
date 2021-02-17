@@ -7,6 +7,71 @@ $yellow-color: #f9b401;
 }
 
 .login-form {
-  width: 30%;
+  width: 70%;
+  min-height: 50vh;
   margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    border: none;
+    border-radius: 25px;
+    background-color: #D4AF79;
+    color: white;
+  }
+}
+
+.login-row {
+  background-color: white;
+  min-height: 80vh;
+  width: 75%;
+}
+
+.welcome {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.input {
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 1.2rem;
+}
+
+.login-side {
+  color: white;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../assets/car-charging.jpg") no-repeat center center;
+
+  p:first-child {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 994px) {
+  .login-side {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../assets/car-charging.jpg") no-repeat -450px top;
+
+    p:nth-child(2) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .login-side {
+    p:nth-child(2) {
+      font-size: 1.2rem;
+    }
+  }
 }

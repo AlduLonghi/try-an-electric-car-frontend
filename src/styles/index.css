@@ -1,11 +1,20 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
 }
 
 #root {
-  width: 80%;
+  width: 100%;
   margin: auto;
+}
+
+*:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 1200px) {
+  #root {
+    width: 85%;
+  }
 }
