@@ -1,38 +1,33 @@
 import { useEffect } from 'react';
-import LoadingWheel from 'components/LoadingWheel';
-import LogIn from 'pages/Login';
-import Home from 'pages/Home';
 import { connect } from 'react-redux';
-import PropTypes, { object } from 'prop-types';
+import { BrowserRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import setUser from '../redux/actions/user';
+import Routes from './Routes';
 
-const App = ({ loggedIn, user }) => {
+const App = ({ setUser, loggedIn }) => {
   useEffect(() => {
+    setUser();
+  }, []);
 
-  });
-
-  let toRenderComponent;
-
-  switch (loggedIn) {
-    case '':
-      toRenderComponent = <LoadingWheel />;
-    case false:
-      toRenderComponent = <LogIn />;
-    case true:
-      toRenderComponent = <Home user={user} />;
-  }
   return (
-    { toRenderComponent }
+    <BrowserRouter>
+      <Routes loggedIn={loggedIn} />
+    </BrowserRouter>
   );
 };
 
 App.propTypes = {
   loggedIn: PropTypes.bool.isRequired,
-  user: PropTypes.instanceOf(Object).isRequired,
+  setUser: PropTypes.func.isRequired,
 };
 
-mapStateToProps = state = ({
+const mapStateToProps = state => ({
   loggedIn: state.user.loggedIn,
-  user: state.user.user,
 });
 
-export default App;
+const mapDispatchToProps = {
+  setUser,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
