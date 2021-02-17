@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import axios from 'axios';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { setUser, loggedIn } from '../redux/actions/user';
@@ -15,9 +14,13 @@ const Login = ({ setUser, loggedIn }) => {
 
   const handleOnClick = () => {
     console.log(loginInputs);
-    axios.post('http://localhost:3000/login', {
-      email: loginInputs.email,
-      password: loginInputs.password,
+    fetch('http://localhost:3000/login', {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(loginInputs),
     })
       .then(res => {
         setUser(res.data);

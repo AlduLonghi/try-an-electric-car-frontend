@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { LOGGED_IN, SET_USER } from './types';
 
 export const loggedIn = logged => ({
@@ -12,12 +11,7 @@ export const setUser = userData => ({
 });
 
 export const fetchUser = () => dispatch => {
-  axios.get('http://localhost:3000/', {
-    headers: {
-      'Access-Control-Allow-Origin': 'http://localhost:3001',
-      'Access-Control-Allow-Credentials': true,
-    },
-  })
+  fetch('http://localhost:3000/')
     .then(res => {
       dispatch(setUser(res.data));
       dispatch(loggedIn('true'));

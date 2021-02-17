@@ -14,7 +14,7 @@ const Routes = ({ loggedIn }) => (
         let toRender;
         if (loggedIn === 'false') {
           toRender = (<Redirect to="/login" />);
-        } else if (loggedIn === true) {
+        } else if (loggedIn === 'true') {
           toRender = (<Redirect to="/home" />);
         }
         return toRender;
