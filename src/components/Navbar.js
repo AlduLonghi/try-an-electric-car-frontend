@@ -22,7 +22,7 @@ const Navbar = () => {
         </button>
       </div>
       <nav className={`${navbarDisplay}`}>
-        <h1>Electric</h1>
+        <h1 className="text-center">Electric</h1>
         <ul className="text-uppercase font-weight-bold py-1 text-center d-flex flex-column justify-content-center">
           <li>Profile</li>
           <li>Lifestyle</li>

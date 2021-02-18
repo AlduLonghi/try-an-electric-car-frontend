@@ -11,3 +11,7 @@ body {
 *:focus {
   outline: none;
 }
+
+main {
+  margin-left: 20vw;
+}

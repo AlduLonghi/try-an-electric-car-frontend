@@ -4,7 +4,9 @@ import Navbar from '../components/Navbar';
 const Home = () => (
   <div>
     <Navbar />
-    <LogoutBtn />
+    <main>
+      <LogoutBtn />
+    </main>
   </div>
 );
 

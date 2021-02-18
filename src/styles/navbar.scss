@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranga&display=swap');
+
+$font-ranga: 'Ranga', cursive;
+
 button {
   all: initial;
 }
@@ -45,5 +49,40 @@ nav {
 
   li:not(:last-child) {
     border-bottom: 0.8px solid #89aa0f;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .collapse-btn {
+    display: none;
+  }
+
+  nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: block !important;
+    width: 20vw;
+    background-color: white;
+
+    h1 {
+      display: block;
+      font-family: $font-ranga;
+      color: #57585a;
+      font-size: 3rem;
+      padding-top: 2rem;
+      transform: rotate(-10deg);
+      text-decoration: underline;
+    }
+
+    ul {
+      height: 60%;
+    }
+
+    li {
+      color: #57585a;
+    }
   }
 }
