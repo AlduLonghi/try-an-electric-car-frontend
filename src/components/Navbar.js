@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Footer from './Footer';
 import '../styles/navbar.scss';
 
 const Navbar = () => {
@@ -28,6 +29,7 @@ const Navbar = () => {
           <li>Lifestyle</li>
           <li>Models</li>
         </ul>
+        <Footer component="navbar" />
       </nav>
     </div>
   );
