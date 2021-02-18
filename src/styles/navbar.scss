@@ -1,0 +1,49 @@
+button {
+  all: initial;
+}
+
+.collapse-btn {
+  position: sticky;
+  height: 3rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  span {
+    color: white;
+    font-size: 3rem;
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+nav {
+  background-color: #97bf10;
+  transition: height 1.5s ease;
+
+  h1 {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    height: 100%;
+    width: 70%;
+    margin: auto;
+  }
+
+  li {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.8rem 0;
+  }
+
+  li:not(:last-child) {
+    border-bottom: 0.8px solid #89aa0f;
+  }
+}

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { setUser, loggedIn } from '../redux/actions/user';
 import fetchConfig from '../helpers/fetch';
-import '../styles/Auth.scss';
+import '../styles/auth.scss';
 
 const Login = ({ setUser, loggedIn }) => {
   const history = useHistory();
@@ -51,7 +51,7 @@ const Login = ({ setUser, loggedIn }) => {
               <span className="text-muted text-uppercase mb-3">Password</span>
               <input type="password" className="input" name="password" onChange={handleChange} />
             </div>
-            <button type="button" className="d-block mx-auto py-2 text-uppercase" onClick={handleOnClickForm}>Log in</button>
+            <button type="button" className="d-block mx-auto py-2 text-uppercase text-center" onClick={handleOnClickForm}>Log in</button>
           </form>
         </div>
         <div className="col-md-3 auth-side">

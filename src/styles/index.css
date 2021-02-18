@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-#root {
-  background-color: #f9b401;
+body {
+  background-color: #f9b401 !important;
 }
 
 *:focus {
