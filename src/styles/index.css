@@ -5,16 +5,9 @@
 }
 
 #root {
-  width: 100%;
-  margin: auto;
+  background-color: #f9b401;
 }
 
 *:focus {
   outline: none;
-}
-
-@media screen and (min-width: 1200px) {
-  #root {
-    width: 85%;
-  }
 }
