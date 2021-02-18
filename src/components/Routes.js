@@ -2,11 +2,13 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
+import Signup from '../pages/Signup';
 
 const Routes = ({ loggedIn }) => (
   <Switch>
     <Route exact path="/login" component={Login} />
     <Route exact path="/home" component={Home} />
+    <Route exact path="/signup" component={Signup} />
     <Route
       exact
       path="/"
