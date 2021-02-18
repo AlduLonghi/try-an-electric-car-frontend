@@ -29,9 +29,9 @@ const Login = ({ setUser, loggedIn }) => {
   return (
     <div className="login-cont d-flex align-items-center justify-content-center">
       <div className="row login-row mx-0">
-        <div className="col-lg-9 d-flex align-items-center py-5">
+        <div className="col-lg-9 d-flex align-items-center">
           <form className="login-form">
-            <p className="welcome">Welcome back</p>
+            <p className="welcome">Welcome back!</p>
             <div>
               <span className="text-muted text-uppercase mb-3">Email</span>
               <input type="email" className="input" name="email" onChange={handleChange} />

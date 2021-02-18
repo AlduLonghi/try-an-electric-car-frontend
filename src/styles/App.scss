@@ -7,8 +7,8 @@ $yellow-color: #f9b401;
 }
 
 .login-form {
-  width: 70%;
-  min-height: 50vh;
+  width: 100%;
+  min-height: 40vh;
   margin: auto;
   text-align: center;
   display: flex;
@@ -31,12 +31,12 @@ $yellow-color: #f9b401;
 
 .login-row {
   background-color: white;
-  min-height: 80vh;
-  width: 75%;
+  min-height: 90vh;
+  width: 85%;
 }
 
 .welcome {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0;
 }
