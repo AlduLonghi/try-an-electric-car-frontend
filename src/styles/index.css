@@ -8,6 +8,13 @@
   outline: none;
 }
 
-main {
-  margin-left: 18vw;
+#root {
+  height: 100vh;
+}
+
+@media screen and (min-width: 994px) {
+  main {
+    margin-left: 18vw;
+    height: 100%;
+  }
 }

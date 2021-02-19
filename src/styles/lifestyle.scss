@@ -1,0 +1,55 @@
+body {
+  background-color: #e4e5e9 !important;
+}
+
+.backg-yellow {
+  background-color: #f5c302;
+}
+
+.backg-red {
+  background-color: #dd2e16;
+}
+
+.backg-grey {
+  background-color: #2f302e;
+}
+
+.backg-green {
+  background-color: #b0d418;
+}
+
+.lifestyle-cont {
+  height: 100%;
+  margin-top: 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+  }
+
+  .column {
+    padding: 0;
+    height: 50vw;
+  }
+}
+
+p {
+  color: white;
+  font-size: 9vw;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 994px) {
+  .lifestyle-cont {
+    margin-top: 0;
+
+    .column {
+      height: 18vw;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+}

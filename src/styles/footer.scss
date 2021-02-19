@@ -1,5 +1,5 @@
 img {
-  width: 1.8rem;
+  width: 1.5rem;
   color: white;
 }
 
@@ -13,7 +13,7 @@ p {
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 994px) {
   .as-navbar-component {
     display: block;
   }
