@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import '../styles/navbar.scss';
 
@@ -25,9 +26,9 @@ const Navbar = () => {
       <nav className={`${navbarDisplay}`}>
         <h1 className="text-center">Electric</h1>
         <ul className="text-uppercase font-weight-bold py-1 text-center d-flex flex-column justify-content-center">
-          <li>Profile</li>
-          <li>Lifestyle</li>
-          <li>Models</li>
+          <li><Link to="/home">Lifestyle</Link></li>
+          <li><Link to="/models">Models</Link></li>
+          <li><Link to="/profile">Profile</Link></li>
         </ul>
         <Footer component="navbar" />
       </nav>

@@ -38,14 +38,20 @@ nav {
   ul {
     list-style: none;
     height: 100%;
-    width: 70%;
+    width: 100%;
     margin: auto;
   }
 
   li {
+    width: 100%;
+  }
+
+  a {
+    display: block;
     color: #97bf10;
     font-size: 1.5rem;
     padding: 0.5rem 0;
+    width: 100%;
   }
 }
 
@@ -82,9 +88,16 @@ nav {
       margin-bottom: 10rem;
     }
 
-    li {
+    a {
       color: $grey-text;
       padding: 0.3rem 0;
+    }
+
+    a:focus,
+    a:active {
+      text-decoration: none;
+      color: white;
+      background-color: #97bf10;
     }
   }
 }
