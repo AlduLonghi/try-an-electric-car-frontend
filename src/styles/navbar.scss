@@ -27,7 +27,7 @@ button {
 }
 
 nav {
-  background-color: #97bf10;
+  background-color: white;
   transition: height 1.5s ease;
 
   h1 {
@@ -42,13 +42,9 @@ nav {
   }
 
   li {
-    color: white;
+    color: #97bf10;
     font-size: 1.5rem;
-    padding: 0.8rem 0;
-  }
-
-  li:not(:last-child) {
-    border-bottom: 0.8px solid #89aa0f;
+    padding: 0.5rem 0;
   }
 }
 
@@ -63,26 +59,30 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    display: block !important;
-    width: 20vw;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18vw;
     background-color: white;
+    padding: 3rem 0 1.5rem 0;
 
     h1 {
       display: block;
       font-family: $font-ranga;
       color: #57585a;
       font-size: 3rem;
-      padding-top: 2rem;
       transform: rotate(-10deg);
       text-decoration: underline;
     }
 
     ul {
       height: 60%;
+      margin-bottom: 10rem;
     }
 
     li {
       color: #57585a;
+      padding: 0.3rem 0;
     }
   }
 }

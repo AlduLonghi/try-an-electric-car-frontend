@@ -11,11 +11,12 @@ const Footer = ({ component }) => {
 
   return (
     <footer className={classForFooter}>
-      <div className="d-flex justify-content-around w-50 mx-auto">
+      <div className="d-flex justify-content-around w-50 mx-auto mb-2">
         <img src={githubLogo} alt="github" />
         <img src={linkedinLogo} alt="linkedin" />
         <img src={behanceLogo} alt="behance" />
       </div>
+      <p className="text-center">©2021 Aldana Longhi</p>
     </footer>
   );
 };

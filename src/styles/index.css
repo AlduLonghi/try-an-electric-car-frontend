@@ -4,14 +4,10 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f9b401 !important;
-}
-
 *:focus {
   outline: none;
 }
 
 main {
-  margin-left: 20vw;
+  margin-left: 18vw;
 }
