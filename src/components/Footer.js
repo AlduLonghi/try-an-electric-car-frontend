@@ -16,7 +16,7 @@ const Footer = ({ component }) => {
         <img src={linkedinLogo} alt="linkedin" />
         <img src={behanceLogo} alt="behance" />
       </div>
-      <p className="text-center">©2021 Aldana Longhi</p>
+      <p className="text-center p-footer">©2021 Aldana Longhi</p>
     </footer>
   );
 };
