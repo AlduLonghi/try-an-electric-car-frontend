@@ -46,7 +46,7 @@ nav {
     width: 100%;
   }
 
-  a {
+  .a-navbar {
     display: block;
     color: #97bf10;
     font-size: 1.5rem;
@@ -88,13 +88,13 @@ nav {
       margin-bottom: 10rem;
     }
 
-    a {
+    .a-navbar {
       color: $grey-text;
       padding: 0.3rem 0;
     }
 
-    a:focus,
-    a:active {
+    .a-navbar:focus,
+    .a-navbar:active {
       text-decoration: none;
       color: white;
       background-color: #97bf10;

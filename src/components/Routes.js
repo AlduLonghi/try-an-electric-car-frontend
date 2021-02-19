@@ -1,14 +1,16 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Login from '../pages/Login';
-import Home from '../pages/Home';
+import Lifestyle from '../pages/Lifestyle';
 import Signup from '../pages/Signup';
+import Models from '../pages/Models';
 
 const Routes = ({ loggedIn }) => (
   <Switch>
     <Route exact path="/login" component={Login} />
-    <Route exact path="/home" component={Home} />
     <Route exact path="/signup" component={Signup} />
+    <Route path="/models" component={Models} />
+    <Route path="/lifestyle" component={Lifestyle} />
     <Route
       exact
       path="/"
@@ -17,7 +19,7 @@ const Routes = ({ loggedIn }) => (
         if (loggedIn === 'false') {
           toRender = (<Redirect to="/login" />);
         } else if (loggedIn === 'true') {
-          toRender = (<Redirect to="/home" />);
+          toRender = (<Redirect to="/lifestyle" />);
         }
         return toRender;
       }}
