@@ -18,11 +18,6 @@
   width: 100%;
   position: relative;
 
-  .main-img {
-    width: 22rem;
-    position: absolute;
-  }
-
   p {
     color: black;
     font-weight: bold;
@@ -32,6 +27,11 @@
 
 .dotted-line {
   width: 2.5rem;
+}
+
+.main-img {
+  width: 22rem;
+  position: absolute;
 }
 
 .pic-background {
@@ -50,20 +50,35 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .main-models {
-    height: 100% !important;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .carousel-cont {
-    width: 85%;
+    width: 90%;
   }
 }
 
 @media screen and (min-width: 998px) {
   .main-models {
     height: 100% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-models {
+    height: 100% !important;
+  }
+
+  .main-img {
+    width: 16rem;
+  }
+
+  .pic-background {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .link-cont {
+    p {
+      font-size: 1.5rem;
+    }
   }
 }

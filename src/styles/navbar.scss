@@ -53,6 +53,11 @@ nav {
     padding: 0.5rem 0;
     width: 100%;
   }
+
+  .a-navbar:hover {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 @media screen and (min-width: 994px) {
