@@ -4,11 +4,13 @@ import Login from '../pages/Login';
 import Lifestyle from '../pages/Lifestyle';
 import Signup from '../pages/Signup';
 import Models from '../pages/Models';
+import CarDetails from '../pages/CarDetails';
 
 const Routes = ({ loggedIn }) => (
   <Switch>
     <Route exact path="/login" component={Login} />
     <Route exact path="/signup" component={Signup} />
+    <Route path="/car/:id" component={CarDetails} />
     <Route path="/models" component={Models} />
     <Route path="/lifestyle" component={Lifestyle} />
     <Route
