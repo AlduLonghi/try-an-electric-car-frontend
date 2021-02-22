@@ -36,11 +36,9 @@ const Models = ({ fetchCars, cars }) => {
   if (cars.length !== 0) {
     toRenderComponent = (
       <Carousel className="mx-auto carousel-cont" responsive={responsive} itemClass="carousel-item-padding-40-px">
-        <CarLink model={cars[0].model} pic={cars[0].profPic[0].url} />
-        <CarLink model={cars[1].model} pic={cars[1].profPic[0].url} />
-        <CarLink model={cars[2].model} pic={cars[2].profPic[0].url} />
-        <CarLink model={cars[3].model} pic={cars[3].profPic[0].url} />
-        <CarLink model={cars[4].model} pic={cars[4].profPic[0].url} />
+        {cars.map(car => (
+          <CarLink key={car.id} model={car} pic={car.profPic[0].url} />
+        ))}
       </Carousel>
     );
   } else {

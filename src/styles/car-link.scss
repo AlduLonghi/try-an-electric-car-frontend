@@ -14,11 +14,19 @@
   background-color: #eac464;
 }
 
+.backg-light-grey {
+  background-color: #ada4a4;
+}
+
+.backg-light-red {
+  background-color: #e05050;
+}
+
 .link-cont {
   width: 100%;
   position: relative;
 
-  p {
+  .p-model {
     color: black;
     font-weight: bold;
     font-size: 2rem;
@@ -44,6 +52,11 @@
   width: 100%;
 }
 
+.link-description {
+  font-size: 0.9rem;
+  color: grey;
+}
+
 @media screen and (min-width: 400px) {
   .main-img {
     width: 26rem;
@@ -59,6 +72,10 @@
 @media screen and (min-width: 998px) {
   .main-models {
     height: 100% !important;
+  }
+
+  .link-description {
+    font-size: 0.7rem;
   }
 }
 
@@ -77,7 +94,7 @@
   }
 
   .link-cont {
-    p {
+    .p-model {
       font-size: 1.5rem;
     }
   }
