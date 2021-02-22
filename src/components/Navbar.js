@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import '../styles/navbar.scss';
 
 const Navbar = () => {
   const [navbarDisplay, setNavbarDisplay] = useState('display-none');
+  const { pathname } = useLocation();
 
   const handleOnClick = () => {
     if (navbarDisplay === 'display-block') {
@@ -13,6 +14,8 @@ const Navbar = () => {
       setNavbarDisplay('display-block');
     }
   };
+
+  const linkText = ['lifestyle', 'models', 'profile'];
 
   return (
     <div>
@@ -26,9 +29,18 @@ const Navbar = () => {
       <nav className={`${navbarDisplay}`}>
         <h1 className="text-center">Electric</h1>
         <ul className="text-uppercase font-weight-bold py-1 text-center d-flex flex-column justify-content-center">
-          <li><Link className="a-navbar" to="/">Lifestyle</Link></li>
-          <li><Link className="a-navbar" to="/models">Models</Link></li>
-          <li><Link className="a-navbar" to="/profile">Profile</Link></li>
+          {linkText.map(link => (
+            <li key={link}>
+              <NavLink
+                activeClassName="active-navlink"
+                isActive={() => pathname === `/${link}`}
+                className="a-navbar"
+                to={`/${link}`}
+              >
+                {link}
+              </NavLink>
+            </li>
+          ))}
         </ul>
         <Footer component="navbar" />
       </nav>
