@@ -1,5 +1,8 @@
 .main-car-details {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .car-details-main-cont {
@@ -100,12 +103,6 @@ h1 {
   .main-car-details {
     background-color: white;
     height: 92%;
-  }
-
-  .car-details-cont {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .go-back-btn {

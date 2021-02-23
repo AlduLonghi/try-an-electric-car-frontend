@@ -6,6 +6,7 @@ import fetchConfig from '../helpers/fetch';
 import Navbar from '../components/Navbar';
 import baseUrl from '../helpers/base-url';
 import '../styles/car-details.scss';
+import LoadingWheel from '../components/LoadingWheel';
 
 const CarDetails = () => {
   const [savedAppointment, setSavedAppointment] = useState(false);
@@ -121,7 +122,9 @@ const CarDetails = () => {
       </div>
     );
   } else {
-    toRederComponent = 'hello';
+    toRederComponent = (
+      <LoadingWheel />
+    );
   }
 
   return (

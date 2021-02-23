@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar';
 import CarLink from '../components/CarLink';
 import 'react-multi-carousel/lib/styles.css';
 import '../styles/car-link.scss';
+import LoadingWheel from '../components/LoadingWheel';
 
 const Models = ({ fetchCars, cars }) => {
   useEffect(() => {
@@ -49,7 +50,11 @@ const Models = ({ fetchCars, cars }) => {
       </>
     );
   } else {
-    toRenderComponent = 'hello';
+    toRenderComponent = (
+      <div className="w-100 h-100 d-flex align-content-center">
+        <LoadingWheel />
+      </div>
+    );
   }
 
   return (
