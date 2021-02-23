@@ -7,6 +7,7 @@ import '../styles/auth.scss';
 
 const Signup = ({ signupUser }) => {
   const history = useHistory();
+  const [errors, setErrors] = useState([]);
   const [signupInputs, setSignupInputs] = useState({
     name: '', email: '', password: '', password_confirmation: '',
   });
@@ -16,11 +17,21 @@ const Signup = ({ signupUser }) => {
   };
 
   const handleOnClickForm = () => {
-    signupUser(signupInputs).then(res => {
-      if (res.ok) {
-        history.push('/');
-      }
-    });
+    if (signupInputs.name.length < 5) {
+      setErrors([...errors, 'Name must be at least 5 characters long']);
+    } else if (signupInputs.password.length < 5) {
+      setErrors([...errors, 'Password must be at least 5 characters long']);
+    } else if (signupInputs.password !== signupInputs.password_confirmation) {
+      setErrors([...errors, 'Passwords don\'t match']);
+    } else {
+      signupUser(signupInputs).then(res => {
+        if (res.ok) {
+          history.push('/');
+        } else {
+          setErrors([...errors, 'Email already taken']);
+        }
+      });
+    }
   };
 
   const handleOnClickSide = () => {
@@ -49,6 +60,7 @@ const Signup = ({ signupUser }) => {
               <span className="text-muted text-uppercase mb-3">Confirm password</span>
               <input type="password" className="input" name="password_confirmation" onChange={handleChange} />
             </div>
+            {errors && errors.map(err => (<p key={err} className="danger">{err}</p>))}
             <button type="button" className="d-block mx-auto py-2 text-uppercase my-3 text-center" onClick={handleOnClickForm}>Sign up</button>
           </form>
         </div>

@@ -19,9 +19,7 @@ const Login = ({ loginUser }) => {
       if (res.ok) {
         history.push('/');
       } else {
-        res.json().then(res => {
-          setErrors(res.errors);
-        });
+        setErrors('Invalid username or password');
       }
     });
   };
@@ -44,9 +42,9 @@ const Login = ({ loginUser }) => {
               <span className="text-muted text-uppercase mb-3">Password</span>
               <input type="password" className="input" name="password" onChange={handleChange} />
             </div>
+            {errors && (<p className="text-danger">{errors}</p>)}
             <button type="button" className="d-block mx-auto py-2 text-uppercase text-center" onClick={handleOnClickForm}>Log in</button>
           </form>
-          {errors && (<p>{errors}</p>)}
         </div>
         <div className="col-md-3 auth-side">
           <div>

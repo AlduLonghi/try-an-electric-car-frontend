@@ -109,11 +109,6 @@ $yellow-color: #f9b401;
 }
 
 @media screen and (min-width: 1200px) {
-  .auth-cont {
-    width: 85%;
-    margin: auto;
-  }
-
   .auth-side {
     p:nth-child(2) {
       font-size: 1.2rem;
@@ -121,7 +116,7 @@ $yellow-color: #f9b401;
   }
 
   .auth-row {
-    width: 80%;
+    width: 60%;
   }
 
   .auth-form {

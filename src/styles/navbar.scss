@@ -65,7 +65,7 @@ nav {
   top: 0;
   right: 0;
   color: white;
-  height: 100%;
+  height: 3rem;
   width: 6rem;
   background-color: #97bf10;
   font-weight: bold;
@@ -121,7 +121,7 @@ nav {
     height: 2.5rem;
     background-color: #f5c302;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -129,6 +129,10 @@ nav {
   nav {
     h1 {
       font-size: 4rem;
+    }
+
+    li {
+      padding: 0.5rem 0;
     }
   }
 }

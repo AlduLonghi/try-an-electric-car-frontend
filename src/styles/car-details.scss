@@ -80,12 +80,11 @@ h1 {
   .car-img {
     height: 25rem;
   }
-}
 
-@media screen and (min-width: 600px) {
   .main-car-details {
     background-color: white;
     height: 92%;
+    margin-top: 4rem;
   }
 
   .car-details-cont {
@@ -99,18 +98,11 @@ h1 {
   }
 }
 
-@media screen and (min-width: 600px) {
-  .main-car-details {
-    background-color: white;
-    height: 92%;
-  }
-
-  .go-back-btn {
-    left: -40px;
-  }
-}
-
 @media screen and (min-width: 764px) {
+  .main-car-details {
+    margin-top: 0;
+  }
+
   .go-back-btn {
     left: -50px;
   }
