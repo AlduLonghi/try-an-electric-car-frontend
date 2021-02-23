@@ -37,10 +37,7 @@ const CarLink = ({ model, pic }) => {
         </div>
         <p className="d-block text-center p-model">{model.model}</p>
         <p className="link-description px-3 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Donec eget sem ultrices magna ornare vestibulum. Donec elit justo,
-          tincidunt vitae dictum eu, viverra a orci.
-          Quisque et lectus at purus sollicitudin rhoncus.
+          {model.description}
         </p>
       </div>
     </Link>
