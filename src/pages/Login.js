@@ -27,7 +27,7 @@ const Login = ({ setUser, loggedIn }) => {
             setUser(jsonRes);
           });
           loggedIn('true');
-          history.push('/home');
+          history.push('/');
         } else {
           loggedIn('false');
         }

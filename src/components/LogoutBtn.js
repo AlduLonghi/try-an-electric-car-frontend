@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import fetchConfig from '../helpers/fetch';
+import '../styles/navbar.scss';
 
 const LogoutBtn = () => {
   const history = useHistory();
@@ -13,7 +14,7 @@ const LogoutBtn = () => {
       });
   };
   return (
-    <button className="btn btn-primary" type="button" onClick={handleOnclick}>Logout</button>
+    <button className="logout-btn text-center" type="button" onClick={handleOnclick}>Logout</button>
   );
 };
 

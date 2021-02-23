@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import '../styles/navbar.scss';
+import LogoutBtn from './LogoutBtn';
 
 const Navbar = () => {
   const [navbarDisplay, setNavbarDisplay] = useState('display-none');
@@ -19,12 +20,15 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="collapse-btn">
-        <button type="button" onClick={handleOnClick}>
-          <span className="material-icons">
-            drag_handle
-          </span>
-        </button>
+      <div>
+        <div className="collapse-btn">
+          <button type="button" onClick={handleOnClick}>
+            <span className="material-icons">
+              drag_handle
+            </span>
+          </button>
+          <LogoutBtn />
+        </div>
       </div>
       <nav className={`${navbarDisplay}`}>
         <h1 className="text-center">Electric</h1>

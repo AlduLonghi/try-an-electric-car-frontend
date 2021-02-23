@@ -60,6 +60,17 @@ nav {
   }
 }
 
+.logout-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  height: 100%;
+  width: 6rem;
+  background-color: #97bf10;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 994px) {
   .collapse-btn {
     display: none;
