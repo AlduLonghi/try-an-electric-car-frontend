@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
 
 $font-ranga: 'Ranga', cursive;
 $grey-text: #3d3d3d;
 
 button {
   all: initial;
+  font-family: 'Rubik', sans-serif;
 }
 
 .collapse-btn {
