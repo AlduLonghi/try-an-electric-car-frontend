@@ -17,7 +17,6 @@ export const fetchUser = () => dispatch => {
     .then(res => {
       if (res.ok) {
         res.json().then(jsonRes => {
-          console.log(jsonRes);
           dispatch(setUser(jsonRes));
         });
         dispatch(loggedIn('true'));
@@ -54,15 +53,15 @@ export const signupUser = signupInputs => dispatch => (
     body: JSON.stringify(signupInputs),
   })
     .then(res => {
-      console.log(res);
-      res.json().then(jsonRes => {
-        localStorage.setItem('token', jsonRes.token);
-        dispatch(setUser(jsonRes.user));
-        dispatch(loggedIn('true'));
-      }).catch(res => {
-        res.json().then(res => console.log(res));
+      if (res.ok) {
+        res.json().then(jsonRes => {
+          localStorage.setItem('token', jsonRes.token);
+          dispatch(setUser(jsonRes.user));
+          dispatch(loggedIn('true'));
+        });
+      } else {
         dispatch(loggedIn('false'));
-      });
+      }
       return res;
     })
 );

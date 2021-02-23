@@ -28,7 +28,6 @@ const CarDetails = () => {
 
   const handleOnChange = e => {
     setDatetime(e.target.value);
-    console.log(datetime);
   };
 
   const handleOnClick = () => {

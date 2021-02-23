@@ -12,7 +12,6 @@ const fetchCars = () => dispatch => {
     .then(res => {
       if (res.ok) {
         res.json().then(jsonRes => {
-          console.log(jsonRes.data);
           dispatch(setCars(jsonRes.data));
         });
       }
