@@ -43,6 +43,10 @@ const Profile = ({ user }) => {
               <div className="card-body">
                 <h5 className="card-title font-weight-bold">{app.model}</h5>
                 <p className="card-text">{date.toString()}</p>
+                <p>
+                  <span className="text-primary">City: </span>
+                  {app.city}
+                </p>
                 <button type="button" onClick={() => handleOnClick(app.id)} className="btn btn-danger ml-auto">Cancel</button>
               </div>
             </div>

@@ -10,7 +10,7 @@ import LoadingWheel from '../components/LoadingWheel';
 
 const CarDetails = () => {
   const [savedAppointment, setSavedAppointment] = useState(false);
-  const [datetime, setDatetime] = useState();
+  const [appointInput, setAppointInput] = useState({ date: '', city: '' });
   const [car, setCar] = useState();
   const { id } = useParams();
   const history = useHistory();
@@ -27,7 +27,7 @@ const CarDetails = () => {
   }, []);
 
   const handleOnChange = e => {
-    setDatetime(e.target.value);
+    setAppointInput({ ...appointInput, [e.target.name]: e.target.value });
   };
 
   const handleOnClick = () => {
@@ -35,7 +35,7 @@ const CarDetails = () => {
       ...fetchConfig(),
       method: 'POST',
       body: JSON.stringify({
-        date: datetime,
+        ...appointInput,
         car_id: id,
       }),
     })
@@ -106,7 +106,13 @@ const CarDetails = () => {
               <p className="text-center font-weight-bold book-text">Book a test drive</p>
               {savedAppointment === false ? (
                 <>
-                  <input className="d-block mx-auto" type="datetime-local" onChange={handleOnChange} />
+                  <input className="d-block mx-auto w-100" type="datetime-local" onChange={handleOnChange} />
+                  <select name="city" onChange={handleOnChange} className="form-select d-block w-100 py-1 mt-3" aria-label="Default select example">
+                    <option>Choose a city</option>
+                    <option value="New York">New York</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Melbourne">Melbourne</option>
+                  </select>
                   <button className="book-button text-uppercase py-2 px-3 d-block mx-auto" type="button" onClick={handleOnClick}>Book it</button>
                 </>
               )
