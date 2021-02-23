@@ -2,12 +2,10 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { setUser, loggedIn } from '../redux/actions/user';
-import fetchConfig from '../helpers/fetch';
+import { loginUser } from '../redux/actions/user';
 import '../styles/auth.scss';
-import baseUrl from '../helpers/base-url';
 
-const Login = ({ setUser, loggedIn }) => {
+const Login = ({ loginUser }) => {
   const history = useHistory();
   const [loginInputs, setLoginInputs] = useState({ email: '', password: '' });
 
@@ -16,22 +14,11 @@ const Login = ({ setUser, loggedIn }) => {
   };
 
   const handleOnClickForm = () => {
-    fetch(`${baseUrl}/login`, {
-      ...fetchConfig,
-      method: 'POST',
-      body: JSON.stringify(loginInputs),
-    })
-      .then(res => {
-        if (res.ok) {
-          res.json().then(jsonRes => {
-            setUser(jsonRes);
-          });
-          loggedIn('true');
-          history.push('/');
-        } else {
-          loggedIn('false');
-        }
-      });
+    loginUser(loginInputs).then(res => {
+      if (res.ok) {
+        history.push('/');
+      }
+    });
   };
 
   const handleOnClickSide = () => {
@@ -68,13 +55,11 @@ const Login = ({ setUser, loggedIn }) => {
 };
 
 Login.propTypes = {
-  setUser: PropTypes.func.isRequired,
-  loggedIn: PropTypes.func.isRequired,
+  loginUser: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = {
-  setUser,
-  loggedIn,
+  loginUser,
 };
 
 export default connect(null, mapDispatchToProps)(Login);

@@ -8,7 +8,7 @@ const setCars = carsData => ({
 });
 
 const fetchCars = () => dispatch => {
-  fetch(`${baseUrl}/cars`, fetchConfig)
+  fetch(`${baseUrl}/cars`, fetchConfig())
     .then(res => {
       if (res.ok) {
         res.json().then(jsonRes => {

@@ -13,7 +13,7 @@ export const setUser = userData => ({
 });
 
 export const fetchUser = () => dispatch => {
-  fetch(baseUrl, fetchConfig)
+  fetch(baseUrl, fetchConfig())
     .then(res => {
       if (res.ok) {
         res.json().then(jsonRes => {
@@ -26,3 +26,23 @@ export const fetchUser = () => dispatch => {
       }
     });
 };
+
+export const loginUser = loginInputs => dispatch => (
+  fetch(`${baseUrl}/login`, {
+    ...fetchConfig(),
+    method: 'POST',
+    body: JSON.stringify(loginInputs),
+  })
+    .then(res => {
+      if (res.ok) {
+        res.json().then(jsonRes => {
+          localStorage.setItem('token', jsonRes.token);
+          dispatch(setUser(jsonRes.user));
+        });
+        loggedIn('true');
+      } else {
+        loggedIn('false');
+      }
+      return res;
+    })
+);

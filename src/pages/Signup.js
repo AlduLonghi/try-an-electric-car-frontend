@@ -19,14 +19,15 @@ const Signup = ({ setUser, loggedIn }) => {
 
   const handleOnClickForm = () => {
     fetch(`${baseUrl}/users`, {
-      ...fetchConfig,
+      ...fetchConfig(),
       method: 'POST',
       body: JSON.stringify(signupInputs),
     })
       .then(res => {
         if (res.ok) {
           res.json().then(jsonRes => {
-            setUser(jsonRes);
+            localStorage.setItem('token', jsonRes.token);
+            setUser(jsonRes.user);
           });
           loggedIn('true');
           history.push('/home');

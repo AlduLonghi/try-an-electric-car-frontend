@@ -15,7 +15,7 @@ const CarDetails = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`${baseUrl}/cars/${id}`, fetchConfig)
+    fetch(`${baseUrl}/cars/${id}`, fetchConfig())
       .then(res => {
         if (res.ok) {
           res.json().then(jsonRes => {
@@ -32,7 +32,7 @@ const CarDetails = () => {
 
   const handleOnClick = () => {
     fetch(`${baseUrl}/appointments`, {
-      ...fetchConfig,
+      ...fetchConfig(),
       method: 'POST',
       body: JSON.stringify({
         date: datetime,

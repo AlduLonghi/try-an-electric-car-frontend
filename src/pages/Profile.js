@@ -10,7 +10,7 @@ const Profile = ({ user }) => {
   const [appointments, setAppointments] = useState();
 
   useEffect(() => {
-    fetch(`${baseUrl}/appointments`, fetchConfig)
+    fetch(`${baseUrl}/appointments`, fetchConfig())
       .then(res => {
         if (res.ok) {
           res.json().then(jsonRes => {
@@ -22,7 +22,7 @@ const Profile = ({ user }) => {
 
   const handleOnClick = id => {
     fetch(`${baseUrl}/appointments/${id}`, {
-      ...fetchConfig,
+      ...fetchConfig(),
       method: 'DELETE',
     }).then(res => {
       if (res.ok) {
