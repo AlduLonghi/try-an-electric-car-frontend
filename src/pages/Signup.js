@@ -2,12 +2,10 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { setUser, loggedIn } from '../redux/actions/user';
-import fetchConfig from '../helpers/fetch';
-import baseUrl from '../helpers/base-url';
+import { signupUser } from '../redux/actions/user';
 import '../styles/auth.scss';
 
-const Signup = ({ setUser, loggedIn }) => {
+const Signup = ({ signupUser }) => {
   const history = useHistory();
   const [signupInputs, setSignupInputs] = useState({
     name: '', email: '', password: '', password_confirmation: '',
@@ -18,23 +16,11 @@ const Signup = ({ setUser, loggedIn }) => {
   };
 
   const handleOnClickForm = () => {
-    fetch(`${baseUrl}/users`, {
-      ...fetchConfig(),
-      method: 'POST',
-      body: JSON.stringify(signupInputs),
-    })
-      .then(res => {
-        if (res.ok) {
-          res.json().then(jsonRes => {
-            localStorage.setItem('token', jsonRes.token);
-            setUser(jsonRes.user);
-          });
-          loggedIn('true');
-          history.push('/home');
-        } else {
-          loggedIn('false');
-        }
-      });
+    signupUser(signupInputs).then(res => {
+      if (res.ok) {
+        history.push('/');
+      }
+    });
   };
 
   const handleOnClickSide = () => {
@@ -79,13 +65,11 @@ const Signup = ({ setUser, loggedIn }) => {
 };
 
 Signup.propTypes = {
-  setUser: PropTypes.func.isRequired,
-  loggedIn: PropTypes.func.isRequired,
+  signupUser: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = {
-  setUser,
-  loggedIn,
+  signupUser,
 };
 
 export default connect(null, mapDispatchToProps)(Signup);

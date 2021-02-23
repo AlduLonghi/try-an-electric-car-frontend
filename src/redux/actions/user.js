@@ -46,3 +46,23 @@ export const loginUser = loginInputs => dispatch => (
       return res;
     })
 );
+
+export const signupUser = signupInputs => dispatch => (
+  fetch(`${baseUrl}/users`, {
+    ...fetchConfig(),
+    method: 'POST',
+    body: JSON.stringify(signupInputs),
+  })
+    .then(res => {
+      if (res.ok) {
+        res.json().then(jsonRes => {
+          localStorage.setItem('token', jsonRes.token);
+          dispatch(setUser(jsonRes.user));
+        });
+        loggedIn('true');
+      } else {
+        loggedIn('false');
+      }
+      return res;
+    })
+);
