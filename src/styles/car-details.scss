@@ -14,6 +14,7 @@
 .car-details-cont {
   width: 90%;
   padding-top: 2rem;
+  height: 100vh;
 }
 
 h1 {
@@ -47,7 +48,7 @@ h1 {
 
 .go-back-btn {
   position: relative;
-  left: -45px;
+  left: -30px;
   padding: 1rem 0 1rem 2rem;
   border-radius: 0 20px 20px 0;
   background-color: #97bf10;
@@ -88,5 +89,43 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .go-back-btn {
+    left: -40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .main-car-details {
+    background-color: white;
+    height: 92%;
+  }
+
+  .car-details-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .go-back-btn {
+    left: -40px;
+  }
+}
+
+@media screen and (min-width: 764px) {
+  .go-back-btn {
+    left: -50px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .car-img {
+    height: 35rem;
+  }
+
+  .go-back-btn {
+    left: -75px;
+    margin-top: 2rem;
   }
 }

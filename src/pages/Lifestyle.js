@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar';
 import '../styles/lifestyle.scss';
 
 const Lifestyle = () => (
-  <div className="h-100">
+  <div className="h-100 lifestyle-cont">
     <Navbar />
     <main>
       <div className="w-75 mx-auto lifestyle-cont d-flex flex-column justify-content-center">

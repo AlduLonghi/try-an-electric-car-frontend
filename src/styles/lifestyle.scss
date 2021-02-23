@@ -20,7 +20,6 @@ body {
 
 .lifestyle-cont {
   height: 100%;
-  margin-top: 1rem;
 
   img {
     width: 100%;
@@ -51,6 +50,7 @@ body {
 @media screen and (min-width: 994px) {
   .lifestyle-cont {
     margin-top: 0;
+    height: 100vh;
 
     .column {
       height: 18vw;

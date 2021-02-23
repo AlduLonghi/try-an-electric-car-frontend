@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { setUser, loggedIn } from '../redux/actions/user';
 import fetchConfig from '../helpers/fetch';
 import '../styles/auth.scss';
+import baseUrl from '../helpers/base-url';
 
 const Login = ({ setUser, loggedIn }) => {
   const history = useHistory();
@@ -15,7 +16,7 @@ const Login = ({ setUser, loggedIn }) => {
   };
 
   const handleOnClickForm = () => {
-    fetch('http://localhost:3000/login', {
+    fetch(`${baseUrl}/login`, {
       ...fetchConfig,
       method: 'POST',
       body: JSON.stringify(loginInputs),

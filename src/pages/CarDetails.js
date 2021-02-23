@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import fetchConfig from '../helpers/fetch';
 import Navbar from '../components/Navbar';
+import baseUrl from '../helpers/base-url';
 import '../styles/car-details.scss';
 
 const CarDetails = () => {
@@ -14,11 +15,10 @@ const CarDetails = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/cars/${id}`, fetchConfig)
+    fetch(`${baseUrl}/cars/${id}`, fetchConfig)
       .then(res => {
         if (res.ok) {
           res.json().then(jsonRes => {
-            console.log(jsonRes.data);
             setCar(jsonRes.data);
           });
         }
@@ -31,7 +31,7 @@ const CarDetails = () => {
   };
 
   const handleOnClick = () => {
-    fetch('http://localhost:3000/appointments', {
+    fetch(`${baseUrl}/appointments`, {
       ...fetchConfig,
       method: 'POST',
       body: JSON.stringify({
@@ -68,7 +68,7 @@ const CarDetails = () => {
   let toRederComponent;
   if (car) {
     toRederComponent = (
-      <div className="car-details-cont mx-auto h-100">
+      <div className="car-details-cont mx-auto">
         <div className="row">
           <div className="col-12 col-md-8">
             <Carousel className="mx-auto carousel-img" responsive={responsive} itemClass="carousel-item-padding-40-px">

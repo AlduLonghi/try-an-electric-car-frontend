@@ -4,21 +4,32 @@ import { connect } from 'react-redux';
 import fetchConfig from '../helpers/fetch';
 import Navbar from '../components/Navbar';
 import '../styles/profile.scss';
+import baseUrl from '../helpers/base-url';
 
 const Profile = ({ user }) => {
   const [appointments, setAppointments] = useState();
 
   useEffect(() => {
-    fetch('http://localhost:3000/appointments', fetchConfig)
+    fetch(`${baseUrl}/appointments`, fetchConfig)
       .then(res => {
         if (res.ok) {
           res.json().then(jsonRes => {
-            console.log(jsonRes.data);
             setAppointments(jsonRes.data);
           });
         }
       });
   }, []);
+
+  const handleOnClick = id => {
+    fetch(`${baseUrl}/appointments/${id}`, {
+      ...fetchConfig,
+      method: 'DELETE',
+    }).then(res => {
+      if (res.ok) {
+        setAppointments(appointments.filter(app => app.id !== id));
+      }
+    });
+  };
 
   let toRenderComponent;
   if (appointments) {
@@ -33,11 +44,11 @@ const Profile = ({ user }) => {
           {appointments.map(app => {
             const date = new Date(app.datetime);
             return (
-              <div key={app.id} className="card w-50 mx-auto mt-2">
+              <div key={app.id} className="card mx-auto mt-2">
                 <div className="card-body">
                   <h5 className="card-title font-weight-bold">{app.model}</h5>
                   <p className="card-text">{date.toString()}</p>
-                  <button type="button" className="btn btn-danger ml-auto">Cancel</button>
+                  <button type="button" onClick={() => handleOnClick(app.id)} className="btn btn-danger ml-auto">Cancel</button>
                 </div>
               </div>
             );

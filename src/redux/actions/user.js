@@ -1,5 +1,6 @@
 import { LOGGED_IN, SET_USER } from './types';
 import fetchConfig from '../../helpers/fetch';
+import baseUrl from '../../helpers/base-url';
 
 export const loggedIn = logged => ({
   type: LOGGED_IN,
@@ -12,7 +13,7 @@ export const setUser = userData => ({
 });
 
 export const fetchUser = () => dispatch => {
-  fetch('http://localhost:3000/', fetchConfig)
+  fetch(baseUrl, fetchConfig)
     .then(res => {
       if (res.ok) {
         res.json().then(jsonRes => {

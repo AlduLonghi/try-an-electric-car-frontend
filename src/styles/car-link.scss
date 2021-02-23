@@ -3,7 +3,6 @@ a:hover {
 }
 
 .main-models {
-  height: 93.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +65,7 @@ a:hover {
 }
 
 .models-text-cont {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 @media screen and (min-width: 400px) {
@@ -101,7 +100,7 @@ a:hover {
   }
 
   .main-img {
-    width: 16rem;
+    width: 17rem;
   }
 
   .pic-background {
@@ -113,5 +112,30 @@ a:hover {
     .p-model {
       font-size: 1.5rem;
     }
+  }
+
+  .models-cont {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .main-img {
+    width: 26rem;
+  }
+
+  .pic-background {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .link-cont {
+    .p-model {
+      font-size: 1.5rem;
+    }
+  }
+
+  .models-cont {
+    height: 100vh;
   }
 }

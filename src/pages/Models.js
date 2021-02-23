@@ -41,7 +41,7 @@ const Models = ({ fetchCars, cars }) => {
           <p className="select-a-car-text font-weight-bold mt-2">Please select a car model</p>
           <span className="line-span d-block mx-auto mt-5" />
         </div>
-        <Carousel className="mx-auto carousel-cont" responsive={responsive} itemClass="carousel-item-padding-40-px">
+        <Carousel className="mx-auto carousel-cont" responsive={responsive} itemClass="carousel-item-padding-20-px">
           {cars.map(car => (
             <CarLink key={car.id} model={car} pic={car.profPic[0].url} />
           ))}
@@ -53,7 +53,7 @@ const Models = ({ fetchCars, cars }) => {
   }
 
   return (
-    <div className="h-100 models-cont">
+    <div className="models-cont">
       <Navbar />
       <main className="main-models">
         {toRenderComponent}
