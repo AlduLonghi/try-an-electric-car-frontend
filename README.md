@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Try an electric car
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![linters](https://img.shields.io/badge/Linters-Passing-brightgreen)]()
+[![linters](https://img.shields.io/badge/Author-Aldana%20Longhi-blue)](https://github.com/AlduLonghi)
 
-## Available Scripts
 
-In the project directory, you can run:
+## What is this project about? 
 
-### `yarn start`
+This project consisted on building the front-end application for a full-stack website where you can book appointments for electric cars' test drive.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users can:
+- Sign up, log in and sign out.
+- Check the catalogue of available car models.
+- Go to model's details page and book a test drive appointment.
+- Go to their profile and check all of their appointments.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src="./src/assets/mockup.png" width="1000" height="800">
 
-### `yarn test`
+## Built with: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
 
-### `yarn build`
+**Features**
+- [React](https://reactjs.org/)
+- [Stylelint](https://github.com/stylelint/stylelint)
+- [Eslint](https://eslint.org/)
+- [Create React App](https://github.com/facebook/create-react-app).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Live demo link
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Electricar](https://electricar.herokuapp.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to use this app locally?
 
-### `yarn eject`
+**Pre-requisites**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Having [Node](https://nodejs.org/en/) installed on your machine.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Setting up instructions 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**In case you use Git**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Open terminal 
 
-## Learn More
+2. Run the following commands:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `git clone https://github.com/AlduLonghi/try-an-electric-car-frontend.git`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `cd try-an-electric-car`
 
-### Code Splitting
+- `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `npm start`
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**In case you don't use a control version system**
 
-### Making a Progressive Web App
+1. Go to [the repository](https://github.com/AlduLonghi/try-an-electric-car-frontend.git)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Press the green button that says "Code".
 
-### Advanced Configuration
+3. Press "Download zip".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Once downloaded, extract the files.
 
-### Deployment
+5. Right click on the folder, press "Open in terminal".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+6. Run:
 
-### `yarn build` fails to minify
+- `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm start`
+
+
+## Author 
+
+👤 **Aldana**
+​
+
+- Github: [@AlduLonghi](https://github.com/AlduLonghi)
+
+- Twitter: [@AbrilLonghi](https://twitter.com/AbrilLonghi)
+
+- Linkedin: [Aldana Abril Longhi](https://www.linkedin.com/in/aldana-abril-longhi-a842ba1a7/)
+
+## Contributing 
+
+- To contribute to this project:
+- Fork this repository & clone locally.
+- Create an upstream remote and sync your local copy.
+- Create a new branch.
+- Push your code to your origin repository.
+- Create a new Pull Request .
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+​
+
+## Acknowledgments
+
+- Microverse curriculum.
+- [Murat Korkmaz on Behance](https://www.behance.net/muratk)
