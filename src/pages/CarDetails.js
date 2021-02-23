@@ -101,10 +101,7 @@ const CarDetails = () => {
               </tbody>
             </table>
             <p className="car-description text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Donec eget sem ultrices magna ornare vestibulum. Donec elit justo,
-              tincidunt vitae dictum eu, viverra a orci.
-              Quisque et lectus at purus sollicitudin rhoncus.
+              {car.description}
             </p>
             <form>
               <p className="text-center font-weight-bold book-text">Book a test drive</p>

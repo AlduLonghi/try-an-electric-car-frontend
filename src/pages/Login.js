@@ -8,6 +8,7 @@ import '../styles/auth.scss';
 const Login = ({ loginUser }) => {
   const history = useHistory();
   const [loginInputs, setLoginInputs] = useState({ email: '', password: '' });
+  const [errors, setErrors] = useState();
 
   const handleChange = e => {
     setLoginInputs({ ...loginInputs, [e.target.name]: e.target.value });
@@ -17,6 +18,10 @@ const Login = ({ loginUser }) => {
     loginUser(loginInputs).then(res => {
       if (res.ok) {
         history.push('/');
+      } else {
+        res.json().then(res => {
+          setErrors(res.errors);
+        });
       }
     });
   };
@@ -41,6 +46,7 @@ const Login = ({ loginUser }) => {
             </div>
             <button type="button" className="d-block mx-auto py-2 text-uppercase text-center" onClick={handleOnClickForm}>Log in</button>
           </form>
+          {errors && (<p>{errors}</p>)}
         </div>
         <div className="col-md-3 auth-side">
           <div>

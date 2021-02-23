@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
       </div>
       <nav className={`${navbarDisplay}`}>
-        <h1 className="text-center">Electric</h1>
+        <h1 className="text-center">Electricar</h1>
         <ul className="text-uppercase font-weight-bold py-1 text-center d-flex flex-column justify-content-center">
           {linkText.map(link => (
             <li key={link}>

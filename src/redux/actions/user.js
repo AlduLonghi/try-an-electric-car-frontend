@@ -39,9 +39,9 @@ export const loginUser = loginInputs => dispatch => (
           localStorage.setItem('token', jsonRes.token);
           dispatch(setUser(jsonRes.user));
         });
-        loggedIn('true');
+        dispatch(loggedIn('true'));
       } else {
-        loggedIn('false');
+        dispatch(loggedIn('false'));
       }
       return res;
     })
@@ -54,15 +54,15 @@ export const signupUser = signupInputs => dispatch => (
     body: JSON.stringify(signupInputs),
   })
     .then(res => {
-      if (res.ok) {
-        res.json().then(jsonRes => {
-          localStorage.setItem('token', jsonRes.token);
-          dispatch(setUser(jsonRes.user));
-        });
-        loggedIn('true');
-      } else {
-        loggedIn('false');
-      }
+      console.log(res);
+      res.json().then(jsonRes => {
+        localStorage.setItem('token', jsonRes.token);
+        dispatch(setUser(jsonRes.user));
+        dispatch(loggedIn('true'));
+      }).catch(res => {
+        res.json().then(res => console.log(res));
+        dispatch(loggedIn('false'));
+      });
       return res;
     })
 );

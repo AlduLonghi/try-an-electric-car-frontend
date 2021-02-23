@@ -24,7 +24,7 @@ const CarLink = ({ model, pic }) => {
   const backgClass = getClass();
 
   return (
-    <Link to={`car/${model.id}`}>
+    <Link to={`car/${model.id}`} className="car-link">
       <div className="link-cont">
         <div className="pic-container d-flex flex-column justify-content-center align-items-center">
           <img className="main-img" src={pic} alt="car-profile" />
