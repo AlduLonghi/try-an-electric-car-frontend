@@ -46,6 +46,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <LogoutBtn />
         <Footer component="navbar" />
       </nav>
     </div>
