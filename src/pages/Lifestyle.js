@@ -6,7 +6,7 @@ const Lifestyle = () => (
     <Navbar />
     <main>
       <div className="w-75 mx-auto lifestyle-cont d-flex flex-column justify-content-center">
-        <div>
+        <div className="lifestyle-grid">
           <div className="row">
             <div className="col-lg-4 col-12 column">
               <img className="grid-img" src="https://image.freepik.com/free-photo/human-hand-is-holding-electric-car-charging-connect-electric-car_1153-5059.jpg" alt="jaja" />

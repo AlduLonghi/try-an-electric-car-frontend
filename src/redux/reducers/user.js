@@ -2,7 +2,7 @@ import { LOGGED_IN, SET_USER } from '../actions/types';
 
 const initialState = {
   loggedIn: '',
-  user: '',
+  user: {},
 };
 
 const userReducer = (state = initialState, action) => {

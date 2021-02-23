@@ -61,3 +61,12 @@ body {
     font-size: 1.8rem;
   }
 }
+
+@media screen and (min-width: 1300px) {
+  .lifestyle-cont {
+    .column {
+      padding: 0;
+      height: 16vw;
+    }
+  }
+}
