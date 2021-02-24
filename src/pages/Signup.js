@@ -28,7 +28,7 @@ const Signup = ({ signupUser }) => {
       getErrors.push('Passwords don\'t match');
     }
 
-    if (errors.length === 0) {
+    if (getErrors.length === 0) {
       signupUser(signupInputs).then(res => {
         if (res.ok) {
           history.push('/');
@@ -37,6 +37,8 @@ const Signup = ({ signupUser }) => {
           setErrors([...getErrors]);
         }
       });
+    } else {
+      setErrors([...getErrors]);
     }
   };
 
@@ -66,7 +68,7 @@ const Signup = ({ signupUser }) => {
               <span className="text-muted text-uppercase mb-3">Confirm password</span>
               <input type="password" className="input" name="password_confirmation" onChange={handleChange} />
             </div>
-            {errors && errors.map(err => (<p key={err} className="text-danger mb-0">{err}</p>))}
+            {errors && errors.map(err => (<p key={err} className="text-muted mb-0">{err}</p>))}
             <button type="button" className="d-block mx-auto py-2 text-uppercase my-3 text-center" onClick={handleOnClickForm}>Sign up</button>
           </form>
         </div>
