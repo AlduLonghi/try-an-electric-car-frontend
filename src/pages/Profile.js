@@ -37,12 +37,13 @@ const Profile = ({ user }) => {
     toRenderComponent = (
       <div>
         {appointments.map(app => {
-          const date = new Date(app.datetime);
+          const date = app.datetime.split(' ');
+          const datetime = new Date(Date.parse(app.datetime));
           return (
             <div key={app.id} className="card mx-auto mt-2">
               <div className="card-body">
                 <h5 className="card-title font-weight-bold">{app.model}</h5>
-                <p className="card-text">{date.toString()}</p>
+                <p className="card-text">{`${datetime.toDateString()} at ${date[1]} ${date[2]}`}</p>
                 <p>
                   <span className="text-primary">City: </span>
                   {app.city}

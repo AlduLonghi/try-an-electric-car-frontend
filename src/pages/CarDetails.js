@@ -9,8 +9,10 @@ import '../styles/car-details.scss';
 import LoadingWheel from '../components/LoadingWheel';
 
 const CarDetails = () => {
+  const today = new Date();
+  console.log(today.getUTCDate());
   const [savedAppointment, setSavedAppointment] = useState(false);
-  const [appointInput, setAppointInput] = useState({ date: '', city: '' });
+  const [appointInput, setAppointInput] = useState({ date: `${today.getFullYear()}-${(today.getMonth() + 1)}-${today.getUTCDate() + 1}`, time: '', city: 'New York' });
   const [car, setCar] = useState();
   const { id } = useParams();
   const history = useHistory();
@@ -28,6 +30,8 @@ const CarDetails = () => {
 
   const handleOnChange = e => {
     setAppointInput({ ...appointInput, [e.target.name]: e.target.value });
+    console.log(appointInput.date);
+    console.log(appointInput.time);
   };
 
   const handleOnClick = () => {
@@ -35,7 +39,8 @@ const CarDetails = () => {
       ...fetchConfig(),
       method: 'POST',
       body: JSON.stringify({
-        ...appointInput,
+        city: appointInput.city,
+        date: `${appointInput.date}T${appointInput.time}`,
         car_id: id,
       }),
     })
@@ -106,7 +111,10 @@ const CarDetails = () => {
               <p className="text-center font-weight-bold book-text">Book a test drive</p>
               {savedAppointment === false ? (
                 <>
-                  <input className="d-block mx-auto w-100" type="datetime-local" onChange={handleOnChange} />
+                  <div className="d-flex">
+                    <input className="d-block w-50" type="date" name="date" onChange={handleOnChange} />
+                    <input className="d-block w-50" type="time" name="time" onChange={handleOnChange} />
+                  </div>
                   <select name="city" onChange={handleOnChange} className="form-select d-block w-100 py-1 mt-3" aria-label="Default select example">
                     <option>Choose a city</option>
                     <option value="New York">New York</option>
