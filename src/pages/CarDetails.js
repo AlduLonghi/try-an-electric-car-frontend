@@ -10,7 +10,6 @@ import LoadingWheel from '../components/LoadingWheel';
 
 const CarDetails = () => {
   const today = new Date();
-  console.log(today.getUTCDate());
   const [savedAppointment, setSavedAppointment] = useState(false);
   const [appointInput, setAppointInput] = useState({ date: `${today.getFullYear()}-${(today.getMonth() + 1)}-${today.getUTCDate() + 1}`, time: '', city: 'New York' });
   const [car, setCar] = useState();
@@ -31,8 +30,6 @@ const CarDetails = () => {
 
   const handleOnChange = e => {
     setAppointInput({ ...appointInput, [e.target.name]: e.target.value });
-    console.log(appointInput.date);
-    console.log(appointInput.time);
   };
 
   const handleOnClick = () => {
@@ -50,7 +47,6 @@ const CarDetails = () => {
           setSavedAppointment(true);
         } else {
           res.json().then(res => {
-            console.log(res);
             setErrors(res.errors);
           });
         }
@@ -130,7 +126,7 @@ const CarDetails = () => {
                     <option value="Buenos Aires">Buenos Aires</option>
                     <option value="Melbourne">Melbourne</option>
                   </select>
-                  {errors && <p className="text-danger">{errors[0]}</p>}
+                  {errors && <p className="text-danger mt-1">{errors[0]}</p>}
                   <button className="book-button text-uppercase py-2 px-3 d-block mx-auto" type="button" onClick={handleOnClick}>Book it</button>
                 </>
               )
