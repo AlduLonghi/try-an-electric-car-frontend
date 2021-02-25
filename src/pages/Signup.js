@@ -17,29 +17,15 @@ const Signup = ({ signupUser }) => {
   };
 
   const handleOnClickForm = () => {
-    const getErrors = [];
-    if (signupInputs.name.length < 5) {
-      getErrors.push('Name must be at least 5 characters long');
-    }
-    if (signupInputs.password.length < 5) {
-      getErrors.push('Password must be at least 5 characters long');
-    }
-    if (signupInputs.password !== signupInputs.password_confirmation) {
-      getErrors.push('Passwords don\'t match');
-    }
-
-    if (getErrors.length === 0) {
-      signupUser(signupInputs).then(res => {
-        if (res.ok) {
-          history.push('/');
-        } else {
-          getErrors.push('Email already taken');
-          setErrors([...getErrors]);
-        }
-      });
-    } else {
-      setErrors([...getErrors]);
-    }
+    signupUser(signupInputs).then(res => {
+      if (res.ok) {
+        history.push('/');
+      } else {
+        res.json().then(res => {
+          setErrors([...res.errors]);
+        });
+      }
+    });
   };
 
   const handleOnClickSide = () => {
@@ -68,7 +54,7 @@ const Signup = ({ signupUser }) => {
               <span className="text-muted text-uppercase mb-3">Confirm password</span>
               <input type="password" className="input" name="password_confirmation" onChange={handleChange} />
             </div>
-            {errors && errors.map(err => (<p key={err} className="text-muted mb-0">{err}</p>))}
+            {errors && errors.map(err => (<p key={err} className="text-danger mb-0">{err}</p>))}
             <button type="button" className="d-block mx-auto py-2 text-uppercase my-3 text-center" onClick={handleOnClickForm}>Sign up</button>
           </form>
         </div>
