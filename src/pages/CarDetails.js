@@ -14,6 +14,7 @@ const CarDetails = () => {
   const [savedAppointment, setSavedAppointment] = useState(false);
   const [appointInput, setAppointInput] = useState({ date: `${today.getFullYear()}-${(today.getMonth() + 1)}-${today.getUTCDate() + 1}`, time: '', city: 'New York' });
   const [car, setCar] = useState();
+  const [errors, setErrors] = useState();
   const { id } = useParams();
   const history = useHistory();
 
@@ -47,6 +48,11 @@ const CarDetails = () => {
       .then(res => {
         if (res.ok) {
           setSavedAppointment(true);
+        } else {
+          res.json().then(res => {
+            console.log(res);
+            setErrors(res.errors);
+          });
         }
       });
   };
@@ -88,11 +94,14 @@ const CarDetails = () => {
               <tbody>
                 <tr>
                   <td className="font-weight-bold">Category</td>
-                  <td>{car.category}</td>
+                  <td className="text-capitalize">{car.category}</td>
                 </tr>
                 <tr>
                   <td className="font-weight-bold">Horsepower</td>
-                  <td>{car.horsepower}</td>
+                  <td>
+                    {car.horsepower}
+                    Hp
+                  </td>
                 </tr>
                 <tr>
                   <td className="font-weight-bold">Range</td>
@@ -112,8 +121,8 @@ const CarDetails = () => {
               {savedAppointment === false ? (
                 <>
                   <div className="d-flex">
-                    <input className="d-block w-50" type="date" name="date" onChange={handleOnChange} />
-                    <input className="d-block w-50" type="time" name="time" onChange={handleOnChange} />
+                    <input className="d-block input-date" type="date" name="date" onChange={handleOnChange} />
+                    <input className="d-block input-time" type="time" name="time" onChange={handleOnChange} />
                   </div>
                   <select name="city" onChange={handleOnChange} className="form-select d-block w-100 py-1 mt-3" aria-label="Default select example">
                     <option>Choose a city</option>
@@ -121,6 +130,7 @@ const CarDetails = () => {
                     <option value="Buenos Aires">Buenos Aires</option>
                     <option value="Melbourne">Melbourne</option>
                   </select>
+                  {errors && <p className="text-danger">{errors[0]}</p>}
                   <button className="book-button text-uppercase py-2 px-3 d-block mx-auto" type="button" onClick={handleOnClick}>Book it</button>
                 </>
               )
