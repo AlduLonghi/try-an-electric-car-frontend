@@ -5,10 +5,10 @@ import Login from '../pages/Login';
 import store from '../redux/store';
 
 it('renders Login page correctly', () => {
-    const tree = renderer.create(
-        <Provider store={store}>
-          <Login />
-        </Provider>
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Login />
+    </Provider>,
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
 });
