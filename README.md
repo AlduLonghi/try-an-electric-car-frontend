@@ -52,6 +52,10 @@ Users can:
 
 - `npm start`
 
+3. To run the tests:
+
+- `npm test`
+
 
 **In case you don't use a control version system**
 

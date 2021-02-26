@@ -1,3 +1,3 @@
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'https://try-a-car.herokuapp.com/';
 
 export default baseUrl;
