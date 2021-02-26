@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Login page correctly 1`] = `
+<div
+  className="h-100 profile-cont"
+>
+  <div>
+    <div>
+      <div
+        className="collapse-btn"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="material-icons"
+          >
+            drag_handle
+          </span>
+        </button>
+        <button
+          className="logout-btn text-center display-block"
+          onClick={[Function]}
+          type="button"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+    <nav
+      className="display-none"
+    >
+      <h1
+        className="text-center"
+      >
+        Electricar
+      </h1>
+      <ul
+        className="text-uppercase font-weight-bold py-1 text-center d-flex flex-column justify-content-center"
+      >
+        <li>
+          <a
+            aria-current={null}
+            className="a-navbar"
+            href="/lifestyle"
+            onClick={[Function]}
+          >
+            lifestyle
+          </a>
+        </li>
+        <li>
+          <a
+            aria-current={null}
+            className="a-navbar"
+            href="/models"
+            onClick={[Function]}
+          >
+            models
+          </a>
+        </li>
+        <li>
+          <a
+            aria-current="page"
+            className="a-navbar active-navlink"
+            href="/profile"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            profile
+          </a>
+        </li>
+      </ul>
+      <button
+        className="logout-btn text-center display-block"
+        onClick={[Function]}
+        type="button"
+      >
+        Logout
+      </button>
+      <footer
+        className="as-navbar-component"
+      >
+        <div
+          className="d-flex justify-content-around w-50 mx-auto mb-2"
+        >
+          <a
+            href="https://github.com/AlduLonghi"
+          >
+            <img
+              alt="github"
+              src="github.svg"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/aldanalonghi/"
+          >
+            <img
+              alt="linkedin"
+              src="linkedin.svg"
+            />
+          </a>
+          <a
+            href="https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign"
+          >
+            <img
+              alt="behance"
+              src="behance.svg"
+            />
+          </a>
+        </div>
+        <p
+          className="text-center p-footer"
+        >
+          ©2021 Aldana Longhi
+        </p>
+      </footer>
+    </nav>
+  </div>
+  <main
+    className="h-100"
+  >
+    <div
+      className="text-center models-text-cont"
+    >
+      <h1
+        className="font-weight-bold"
+      >
+        Hello, undefined
+      </h1>
+      <p
+        className="select-a-car-text font-weight-bold mt-2"
+      >
+        These are your test drive appointments
+      </p>
+      <span
+        className="line-span d-block mx-auto mt-5"
+      />
+    </div>
+    <div
+      className="w-100 h-100"
+    >
+      <div
+        className="loading loading4"
+      />
+    </div>
+  </main>
+</div>
+`;

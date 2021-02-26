@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Login page correctly 1`] = `
+<div
+  className="h-100 lifestyle-cont"
+>
+  <div>
+    <div>
+      <div
+        className="collapse-btn"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="material-icons"
+          >
+            drag_handle
+          </span>
+        </button>
+        <button
+          className="logout-btn text-center display-block"
+          onClick={[Function]}
+          type="button"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+    <nav
+      className="display-none"
+    >
+      <h1
+        className="text-center"
+      >
+        Electricar
+      </h1>
+      <ul
+        className="text-uppercase font-weight-bold py-1 text-center d-flex flex-column justify-content-center"
+      >
+        <li>
+          <a
+            aria-current={null}
+            className="a-navbar"
+            href="/lifestyle"
+            onClick={[Function]}
+          >
+            lifestyle
+          </a>
+        </li>
+        <li>
+          <a
+            aria-current={null}
+            className="a-navbar"
+            href="/models"
+            onClick={[Function]}
+          >
+            models
+          </a>
+        </li>
+        <li>
+          <a
+            aria-current={null}
+            className="a-navbar"
+            href="/profile"
+            onClick={[Function]}
+          >
+            profile
+          </a>
+        </li>
+      </ul>
+      <button
+        className="logout-btn text-center display-block"
+        onClick={[Function]}
+        type="button"
+      >
+        Logout
+      </button>
+      <footer
+        className="as-navbar-component"
+      >
+        <div
+          className="d-flex justify-content-around w-50 mx-auto mb-2"
+        >
+          <a
+            href="https://github.com/AlduLonghi"
+          >
+            <img
+              alt="github"
+              src="github.svg"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/aldanalonghi/"
+          >
+            <img
+              alt="linkedin"
+              src="linkedin.svg"
+            />
+          </a>
+          <a
+            href="https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign"
+          >
+            <img
+              alt="behance"
+              src="behance.svg"
+            />
+          </a>
+        </div>
+        <p
+          className="text-center p-footer"
+        >
+          ©2021 Aldana Longhi
+        </p>
+      </footer>
+    </nav>
+  </div>
+  <main>
+    <div
+      className="w-75 mx-auto lifestyle-cont d-flex flex-column justify-content-center"
+    >
+      <div
+        className="lifestyle-grid"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-4 col-12 column"
+          >
+            <img
+              alt="jaja"
+              className="grid-img"
+              src="https://image.freepik.com/free-photo/human-hand-is-holding-electric-car-charging-connect-electric-car_1153-5059.jpg"
+            />
+          </div>
+          <div
+            className="col-lg-4 col-12 column backg-yellow d-flex flex-column justify-content-center"
+          >
+            <p
+              className="text-center font-weight-bold p-lifestyle"
+            >
+              Safety
+            </p>
+          </div>
+          <div
+            className="col-lg-4  col-12 column"
+          >
+            <img
+              alt="jaja"
+              className="grid-img"
+              src="https://image.freepik.com/free-photo/mother-with-daughter-sitting-car-winter_1303-13057.jpg"
+            />
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-4 col-12 column backg-red d-flex flex-column justify-content-center"
+          >
+            <p
+              className="text-center font-weight-bold p-lifestyle"
+            >
+              Speed
+            </p>
+          </div>
+          <div
+            className="col-lg-4 col-12 column"
+          >
+            <img
+              alt="jaja"
+              className="grid-img"
+              src="https://image.freepik.com/free-photo/woman-charging-electro-car-by-her-house_1303-18459.jpg"
+            />
+          </div>
+          <div
+            className="col-lg-4  col-12 column backg-grey d-flex flex-column justify-content-center"
+          >
+            <p
+              className="text-center font-weight-bold p-lifestyle"
+            >
+              Relax
+            </p>
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-4 col-12 column"
+          >
+            <img
+              alt="jaja"
+              className="grid-img"
+              src="https://image.freepik.com/free-photo/expressway-modern-city-skyline_1112-3764.jpg"
+            />
+          </div>
+          <div
+            className="col-lg-4 col-12 column backg-green d-flex flex-column justify-content-center"
+          >
+            <p
+              className="text-center font-weight-bold p-lifestyle"
+            >
+              Eco-friendly
+            </p>
+          </div>
+          <div
+            className="col-lg-4  col-12 column"
+          >
+            <img
+              alt="jaja"
+              className="grid-img"
+              src="https://robbreport.com/wp-content/uploads/2015/10/tesla-s-p90d-011.jpg?w=1000"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;
