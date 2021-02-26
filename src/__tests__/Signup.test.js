@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import Signup from '../pages/Signup';
 import store from '../redux/store';
 
-it('renders Login page correctly', () => {
+it('renders Signup page correctly', () => {
   const tree = renderer.create(
     <Provider store={store}>
       <Signup />

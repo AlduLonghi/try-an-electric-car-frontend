@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Login page correctly 1`] = `
+exports[`renders Signup page correctly 1`] = `
 <div
   className="auth-cont d-flex align-items-center justify-content-center py-3"
 >

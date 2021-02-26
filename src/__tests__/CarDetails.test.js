@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router';
 import CarDetails from '../pages/Lifestyle';
 import store from '../redux/store';
 
-it('renders Login page correctly', () => {
+it('renders CarDetails page correctly', () => {
   const tree = renderer.create(
     <Provider store={store}>
       <MemoryRouter initialEntries={['/car/7']}>
