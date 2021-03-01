@@ -1,0 +1,167 @@
+$black: rgb(0, 0, 0);
+
+.loading {
+  background: $black;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading4 {
+  width: 4em;
+  height: 4em;
+  background: transparent;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  border: 0.5em solid $black;
+  position: relative;
+  border-bottom-color: rgba($black, 0.5);
+}
+
+.loading4::after {
+  position: absolute;
+  top: 0.75em;
+  left: 0.75em;
+  width: 1.5em;
+  height: 1.5em;
+  content: '';
+  display: block;
+  background: $black;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+}
+
+.loading4::before {
+  position: absolute;
+  bottom: 1.5em;
+  left: 1em;
+  content: '';
+  display: block;
+  background: transparent;
+  transform-origin: 50% 100%;
+  border-bottom: 1.5em solid red;
+  border-right: 0.5em solid transparent;
+  border-left: 0.5em solid transparent;
+  animation: loading4 6s infinite;
+}
+
+@-moz-keyframes loading4 {
+  0% {
+    transform: rotate(-135deg);
+    opacity: 0;
+  }
+
+  10% {
+    transform: rotate(-135deg);
+    opacity: 1;
+  }
+
+  30% {
+    transform: rotate(-50deg);
+  }
+
+  40% {
+    transform: rotate(-70deg);
+  }
+
+  60% {
+    transform: rotate(35deg);
+  }
+
+  70% {
+    transform: rotate(30deg);
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  90% {
+    transform: rotate(135deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(135deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loading4 {
+  0% {
+    transform: rotate(-135deg);
+    opacity: 0;
+  }
+
+  10% {
+    transform: rotate(-135deg);
+    opacity: 1;
+  }
+
+  30% {
+    transform: rotate(-50deg);
+  }
+
+  40% {
+    transform: rotate(-70deg);
+  }
+
+  60% {
+    transform: rotate(35deg);
+  }
+
+  70% {
+    transform: rotate(30deg);
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  90% {
+    transform: rotate(135deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(135deg);
+    opacity: 0;
+  }
+}
+
+@keyframes loading4 {
+  0% {
+    transform: rotate(-135deg);
+    opacity: 0;
+  }
+
+  10% {
+    transform: rotate(-135deg);
+    opacity: 1;
+  }
+
+  30% {
+    transform: rotate(-50deg);
+  }
+
+  40% {
+    transform: rotate(-70deg);
+  }
+
+  60% {
+    transform: rotate(35deg);
+  }
+
+  70% {
+    transform: rotate(30deg);
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  90% {
+    transform: rotate(135deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(135deg);
+    opacity: 0;
+  }
+}

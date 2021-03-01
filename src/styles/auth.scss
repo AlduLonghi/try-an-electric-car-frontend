@@ -1,0 +1,125 @@
+$yellow-color: #f9b401;
+
+.auth-cont {
+  min-height: 100vh;
+  background-color: $yellow-color;
+  place-items: center;
+}
+
+.auth-form {
+  width: 100%;
+  min-height: 40vh;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    border: none;
+    width: 50%;
+    border-radius: 25px;
+    background-color: #d4af79;
+    color: white;
+  }
+}
+
+.auth-row {
+  background-color: white;
+  min-height: 90vh;
+  width: 85%;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.input {
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 1.2rem;
+}
+
+.auth-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../assets/car-charging.jpg") no-repeat center center;
+  padding: 3rem 0;
+
+  p:first-child {
+    font-size: 2rem;
+  }
+
+  p:nth-child(2) {
+    font-size: 1.3rem;
+  }
+}
+
+.side-button {
+  background-color: transparent;
+  border: 3px solid white;
+  color: white;
+  border-radius: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .auth-row {
+    min-height: 75vh;
+  }
+
+  .auth-side {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../assets/car-charging.jpg") no-repeat center center;
+
+    p:first-child {
+      font-size: 1.7rem;
+    }
+
+    p:nth-child(2) {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 994px) {
+  .auth-side {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../assets/car-charging.jpg") no-repeat -450px top;
+
+    p:nth-child(2) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .auth-form {
+    button {
+      width: 25%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-side {
+    p:nth-child(2) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .auth-row {
+    width: 60%;
+  }
+
+  .auth-form {
+    width: 70%;
+  }
+}

@@ -1,0 +1,26 @@
+img {
+  width: 1.5rem;
+  color: white;
+}
+
+.p-footer {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #57585a;
+}
+
+.as-navbar-component {
+  display: none;
+}
+
+@media screen and (min-width: 994px) {
+  .as-navbar-component {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  img {
+    width: 2rem;
+  }
+}

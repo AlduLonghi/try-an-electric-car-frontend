@@ -1,0 +1,141 @@
+.car-link:hover {
+  text-decoration: underline black;
+}
+
+.main-models {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.backg-light-green {
+  background-color: #b6c479;
+}
+
+.backg-light-yellow {
+  background-color: #eac464;
+}
+
+.backg-light-grey {
+  background-color: #ada4a4;
+}
+
+.backg-light-red {
+  background-color: #e05050;
+}
+
+.link-cont {
+  width: 100%;
+  position: relative;
+
+  .p-model {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+.dotted-line {
+  width: 2.5rem;
+}
+
+.main-img {
+  width: 22rem;
+  position: absolute;
+}
+
+.pic-background {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+}
+
+.carousel-cont {
+  width: 100%;
+}
+
+.link-description {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.models-cont {
+  background-color: white;
+}
+
+.models-text-cont {
+  padding: 3rem 0;
+}
+
+@media screen and (min-width: 400px) {
+  .main-img {
+    width: 26rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-cont {
+    width: 90%;
+  }
+
+  .main-img {
+    width: 22rem;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  .main-models {
+    height: 100% !important;
+  }
+
+  .link-description {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-models {
+    height: 100% !important;
+  }
+
+  .main-img {
+    width: 17rem;
+  }
+
+  .pic-background {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .link-cont {
+    .p-model {
+      font-size: 1.5rem;
+    }
+  }
+
+  .models-cont {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .main-img {
+    width: 26rem;
+  }
+
+  .pic-background {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .link-cont {
+    .p-model {
+      font-size: 1.5rem;
+    }
+  }
+
+  .models-cont {
+    height: 100vh;
+  }
+}

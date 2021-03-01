@@ -1,0 +1,138 @@
+.main-car-details {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.car-details-main-cont {
+  background-color: white;
+}
+
+.car-img {
+  width: 97%;
+  height: 15rem;
+}
+
+.car-details-cont {
+  width: 90%;
+  padding-top: 2rem;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.car-description {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.book-button {
+  background-color: #97bf10;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  margin-top: 1rem;
+}
+
+.book-text {
+  font-size: 1.2rem;
+}
+
+.p-saved {
+  color: #97bf10;
+  font-size: 1.1rem;
+}
+
+.go-back-btn {
+  position: relative;
+  left: -30px;
+  padding: 1rem 0 1rem 2rem;
+  border-radius: 0 20px 20px 0;
+  background-color: #97bf10;
+  color: white;
+  width: 4rem;
+}
+
+.select-a-car-text {
+  color: grey;
+  font-size: 1rem;
+}
+
+.line-span {
+  width: 15%;
+  height: 1px;
+  border: 1px solid #eac464;
+}
+
+.input-date {
+  width: 70%;
+}
+
+.input-time {
+  width: 30%;
+}
+
+@media screen and (min-width: 480px) {
+  .car-img {
+    height: 20rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .car-img {
+    height: 25rem;
+  }
+
+  .main-car-details {
+    background-color: white;
+    height: 92%;
+    margin-top: 4rem;
+  }
+
+  .car-details-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .go-back-btn {
+    left: -40px;
+  }
+}
+
+@media screen and (min-width: 764px) {
+  .main-car-details {
+    margin-top: 0;
+  }
+
+  .go-back-btn {
+    left: -50px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .car-img {
+    height: 35rem;
+  }
+
+  .go-back-btn {
+    left: -75px;
+    margin-top: 2rem;
+  }
+
+  .link-description {
+    font-size: 1rem;
+  }
+
+  .link-cont {
+    .p-model {
+      font-size: 2rem;
+    }
+  }
+}

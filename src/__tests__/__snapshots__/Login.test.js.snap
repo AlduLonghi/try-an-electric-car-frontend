@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Login page correctly 1`] = `
+<div
+  className="auth-cont d-flex align-items-center justify-content-center py2"
+>
+  <div
+    className="row auth-row mx-0"
+  >
+    <div
+      className="col-md-9 d-flex align-items-center"
+    >
+      <form
+        className="auth-form"
+      >
+        <p
+          className="form-title"
+        >
+          Welcome back!
+        </p>
+        <div>
+          <span
+            className="text-muted text-uppercase mb-3"
+          >
+            Email
+          </span>
+          <input
+            className="input"
+            name="email"
+            onChange={[Function]}
+            type="email"
+          />
+        </div>
+        <div
+          className=""
+        >
+          <span
+            className="text-muted text-uppercase mb-3"
+          >
+            Password
+          </span>
+          <input
+            className="input"
+            name="password"
+            onChange={[Function]}
+            type="password"
+          />
+        </div>
+        <button
+          className="d-block mx-auto py-2 text-uppercase text-center"
+          onClick={[Function]}
+          type="button"
+        >
+          Log in
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-md-3 auth-side"
+    >
+      <div>
+        <p
+          className="mb-3"
+        >
+          New here?
+        </p>
+        <p>
+          Sign up and discover the wonderful universe of electric cars
+        </p>
+      </div>
+      <button
+        className="side-button d-block text-uppercase py-2 px-4 mx-auto"
+        onClick={[Function]}
+        type="button"
+      >
+        Sign up
+      </button>
+    </div>
+  </div>
+</div>
+`;
